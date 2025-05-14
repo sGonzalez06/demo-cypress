@@ -1,0 +1,44 @@
+{
+  "name": "demo-cypress",
+  "version": "1.0.0",
+  "description": "Demo de aplicación Angular con pruebas E2E usando Cypress y Cucumber",
+  "main": "index.js",
+  "scripts": {
+    "start": "ng serve",
+    "build": "ng build",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run"
+  },
+  "keywords": [
+    "angular",
+    "cypress",
+    "cucumber",
+    "testing"
+  ],
+  "author": "",
+  "license": "ISC",
+  "cypress-cucumber-preprocessor": {
+    "stepDefinitions": "cypress/e2e/step_definitions/**/*.js",
+    "json": {
+      "enabled": true,
+      "output": "cypress/cucumber-json"
+    }
+  },
+  "devDependencies": {
+    "@angular/cli": "^19.2.11",
+    "@angular/common": "^19.2.10",
+    "@angular/core": "^19.2.10",
+    "@angular/forms": "^19.2.10",
+    "@angular/platform-browser": "^19.2.10",
+    "@angular/platform-browser-dynamic": "^19.2.10",
+    "@angular/router": "^19.2.10",
+    "@badeball/cypress-cucumber-preprocessor": "^22.0.1",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.4",
+    "@cypress/webpack-preprocessor": "^6.0.4",
+    "cypress": "^14.3.3",
+    "esbuild": "^0.25.4",
+    "rxjs": "^7.8.2",
+    "tslib": "^2.8.1",
+    "zone.js": "^0.15.0"
+  }
+}
