@@ -36,3 +36,10 @@ Then('el botón de enviar debería estar deshabilitado', () => {
 Then('debería ver un mensaje de error de formato', () => {
   cy.get('[data-cy=format-error-message]').should('be.visible');
 });
+
+Then('debería ser redirigido a la página de login', () => {
+  // Esperamos 3 segundos ya que el componente tiene un setTimeout de 3000ms
+  cy.wait(3000);
+  // Verificamos que la URL sea la del login
+  cy.url().should('include', '/login');
+});
