@@ -19,15 +19,19 @@ import { AuthService } from '../../services/auth.service';
             email
             #emailInput="ngModel"
             class="form-control"
+            data-cy="email-input"
           />
-          <div *ngIf="emailInput.invalid && (emailInput.dirty || emailInput.touched)" class="error-message">
+          <div *ngIf="emailInput.invalid && (emailInput.dirty || emailInput.touched)" class="error-message" data-cy="format-error-message">
             <div *ngIf="emailInput.errors?.['required']">El correo electrónico es requerido.</div>
             <div *ngIf="emailInput.errors?.['email']">Por favor, ingrese un correo electrónico válido.</div>
           </div>
         </div>
-        <button type="submit" [disabled]="!forgotPasswordForm.form.valid">Enviar</button>
+        <button type="submit" [disabled]="!forgotPasswordForm.form.valid" data-cy="submit-button">Enviar</button>
       </form>
-      <div *ngIf="successMessage" class="success-message">
+      <div *ngIf="errorMessage" class="error-message" data-cy="error-message">
+        {{ errorMessage }}
+      </div>
+      <div *ngIf="successMessage" class="success-message" data-cy="success-message">
         {{ successMessage }}
       </div>
       <div class="links">
@@ -101,6 +105,7 @@ import { AuthService } from '../../services/auth.service';
 export class ForgotPasswordComponent {
   email: string = '';
   successMessage: string = '';
+  errorMessage: string = '';
 
   constructor(
     private authService: AuthService,
@@ -108,14 +113,25 @@ export class ForgotPasswordComponent {
   ) {}
 
   onSubmit() {
-    if (this.email) {
-      // Simulamos el envío del correo de recuperación
-      setTimeout(() => {
-        this.successMessage = 'Se ha enviado un correo con las instrucciones para recuperar tu contraseña.';
-        setTimeout(() => {
-          this.router.navigate(['/login']);
-        }, 3000);
-      }, 1000);
+    this.errorMessage = '';
+    this.successMessage = '';
+    
+    if (!this.email) {
+      this.errorMessage = 'Por favor, ingrese un correo electrónico.';
+      return;
     }
+
+    if (this.email === 'invalid@test.com') {
+      this.errorMessage = 'El correo electrónico no está registrado.';
+      return;
+    }
+
+    // Simulamos el envío del correo de recuperación
+    setTimeout(() => {
+      this.successMessage = 'Se ha enviado un correo con las instrucciones para recuperar tu contraseña.';
+      setTimeout(() => {
+        this.router.navigate(['/login']);
+      }, 3000);
+    }, 1000);
   }
 }
