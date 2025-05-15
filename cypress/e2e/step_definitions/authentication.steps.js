@@ -47,3 +47,7 @@ Given('que he iniciado sesion con credenciales validas', () => {
 Then('no deberia ver el mensaje {string}', (message) => {
   cy.contains(message).should('not.exist');
 });
+
+Then('deberia ser redirigido a la pagina de login', () => {
+  cy.url().should('include', '/login');
+});

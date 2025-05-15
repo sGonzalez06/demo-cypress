@@ -6,6 +6,7 @@ import { Router } from '@angular/router';
 })
 export class AuthService {
   private isAuthenticated = false;
+  private readonly validEmail = 'test@example.com';
 
   constructor(private router: Router) { }
 
@@ -25,5 +26,10 @@ export class AuthService {
 
   isLoggedIn(): boolean {
     return this.isAuthenticated;
+  }
+
+  requestPasswordReset(email: string): boolean {
+    // Simulación de verificación de correo electrónico
+    return email === this.validEmail;
   }
 }

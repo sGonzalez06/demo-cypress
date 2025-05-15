@@ -51,6 +51,8 @@ npm start
 
 Esto iniciará el servidor de desarrollo en `http://localhost:4200`.
 
+**Nota**: Si encuentras el error "This command is not available when running the Angular CLI outside a workspace", asegúrate de que los archivos de configuración de Angular (angular.json, tsconfig.json) estén presentes en la raíz del proyecto.
+
 ## Ejecutar las pruebas de Cypress
 
 Hay dos formas de ejecutar las pruebas de Cypress:

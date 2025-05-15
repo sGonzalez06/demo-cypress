@@ -91,6 +91,22 @@ out
 .nuxt
 dist
 
+# Angular specific
+.angular/
+/dist
+/tmp
+/out-tsc
+/bazel-out
+
+# Cypress
+cypress/videos/
+cypress/screenshots/
+cypress/downloads/
+
+# Angular environment files
+/src/environments/*.js
+/src/environments/*.js.map
+
 # Gatsby files
 .cache/
 # Comment in the public line in if your project uses Gatsby and not Next.js
