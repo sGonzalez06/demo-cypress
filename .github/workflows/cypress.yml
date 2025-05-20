@@ -9,40 +9,38 @@ on:
     branches:
       - dev
 
+env:
+  FRONTEND_PATH: ./
 jobs:
   cypress-run:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout Repository
         uses: actions/checkout@v4
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: "18"
-          cache: "npm"
+          node-version: '22.x'
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install
+        working-directory: ./
 
-      - name: Start Angular app
+      - name: Start the application
         run: npm start &
+        working-directory: ./
 
       - name: Wait for the application to be ready
-        run: npx wait-on http://localhost:4200
+        run: npx wait-on http://localhost:4200 
 
       - name: Run Cypress tests
-        uses: cypress-io/github-action@v6
-        with:
-          browser: chrome
-          headed: false
-          wait-on: "http://localhost:4200"
-          record: false
+        run: npx cypress run
+        working-directory: ./
 
-      - name: Upload test results
-        uses: actions/upload-artifact@v4
-        if: always()
+      - name: Upload Cypress test results
+        if: failure()
+        uses: actions/upload-artifact@v3
         with:
           name: cypress-results
-          path: cypress/videos/
-          retention-days: 30
+          path: ./cypress/videos
