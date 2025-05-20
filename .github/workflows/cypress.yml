@@ -11,6 +11,7 @@ on:
 
 env:
   FRONTEND_PATH: ./
+
 jobs:
   cypress-run:
     runs-on: ubuntu-latest
@@ -21,7 +22,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '22.x'
+          node-version: '18.x'
 
       - name: Install dependencies
         run: npm install
@@ -38,9 +39,13 @@ jobs:
         run: npx cypress run
         working-directory: ./
 
-      - name: Upload Cypress test results
-        if: failure()
-        uses: actions/upload-artifact@v3
+      - name: Upload test artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
         with:
-          name: cypress-results
-          path: ./cypress/videos
+          name: cypress-artifacts
+          path: |
+            cypress/videos/
+            cypress/screenshots/
+            cypress/cucumber-json/
+          if-no-files-found: ignore
