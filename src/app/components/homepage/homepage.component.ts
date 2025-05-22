@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
 
 @Component({
@@ -7,7 +8,10 @@ import { AuthService } from '../../services/auth.service';
     <div class="homepage-container">
       <h1 data-cy="welcome-message">¡Bienvenido!</h1>
       <p>Has iniciado sesión correctamente.</p>
-      <button (click)="logout()" data-cy="logout-button">Cerrar Sesión</button>
+      <div class="button-container">
+        <button (click)="navigateToProfile()" data-cy="profile-button">Ver Perfil</button>
+        <button (click)="logout()" data-cy="logout-button">Cerrar Sesión</button>
+      </div>
     </div>
   `,
   styles: [`
@@ -20,22 +24,43 @@ import { AuthService } from '../../services/auth.service';
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       text-align: center;
     }
+    .button-container {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 20px;
+    }
     button {
-      background-color: #f44336;
-      color: white;
       padding: 10px 15px;
       border: none;
       border-radius: 4px;
       cursor: pointer;
-      margin-top: 20px;
     }
-    button:hover {
+    [data-cy="profile-button"] {
+      background-color: #2196F3;
+      color: white;
+    }
+    [data-cy="profile-button"]:hover {
+      background-color: #0b7dda;
+    }
+    [data-cy="logout-button"] {
+      background-color: #f44336;
+      color: white;
+    }
+    [data-cy="logout-button"]:hover {
       background-color: #d32f2f;
     }
   `]
 })
 export class HomepageComponent {
-  constructor(private authService: AuthService) { }
+  constructor(
+    private router: Router,
+    private authService: AuthService
+  ) { }
+
+  navigateToProfile(): void {
+    this.router.navigate(['/profile']);
+  }
 
   logout(): void {
     this.authService.logout();

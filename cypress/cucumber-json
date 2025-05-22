@@ -19,7 +19,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 195000000
+              "duration": 285000000
             }
           },
           {
@@ -32,7 +32,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 424000000
+              "duration": 440000000
             }
           },
           {
@@ -45,7 +45,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 79000000
+              "duration": 86000000
             }
           },
           {
@@ -58,7 +58,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 5000000
+              "duration": 10000000
             }
           },
           {
@@ -71,7 +71,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 4000000
+              "duration": 6000000
             }
           }
         ],
@@ -95,7 +95,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 57000000
+              "duration": 94000000
             }
           },
           {
@@ -108,7 +108,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 642000000
+              "duration": 651000000
             }
           },
           {
@@ -121,7 +121,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 84000000
+              "duration": 79000000
             }
           },
           {
@@ -147,7 +147,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 6000000
+              "duration": 8000000
             }
           }
         ],
@@ -171,7 +171,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 512000000
+              "duration": 548000000
             }
           },
           {
@@ -184,7 +184,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 78000000
+              "duration": 81000000
             }
           },
           {
@@ -197,7 +197,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 5000000
+              "duration": 7000000
             }
           },
           {
@@ -210,7 +210,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 6000000
+              "duration": 7000000
             }
           }
         ],
@@ -245,7 +245,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 158000000
+              "duration": 230000000
             }
           },
           {
@@ -258,7 +258,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 322000000
+              "duration": 336000000
             }
           },
           {
@@ -271,7 +271,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 79000000
+              "duration": 82000000
             }
           },
           {
@@ -284,7 +284,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 965000000
+              "duration": 968000000
             }
           },
           {
@@ -321,7 +321,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 59000000
+              "duration": 98000000
             }
           },
           {
@@ -334,7 +334,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 312000000
+              "duration": 325000000
             }
           },
           {
@@ -347,7 +347,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 79000000
+              "duration": 87000000
             }
           },
           {
@@ -360,7 +360,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 5000000
+              "duration": 25000000
             }
           }
         ],
@@ -384,7 +384,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 49000000
+              "duration": 273000000
             }
           },
           {
@@ -397,7 +397,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 241000000
+              "duration": 261000000
             }
           },
           {
@@ -410,7 +410,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 5000000
+              "duration": 9000000
             }
           },
           {
@@ -423,7 +423,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 4000000
+              "duration": 9000000
             }
           }
         ],
@@ -437,5 +437,435 @@
     "name": "Recuperación de contraseña",
     "tags": [],
     "uri": "cypress/e2e/features/forgot-password.feature"
+  },
+  {
+    "description": "  Como un usuario del sistema\n  Quiero poder ver y editar mi perfil\n  Para mantener mi información actualizada",
+    "elements": [
+      {
+        "description": "",
+        "id": "perfil-de-usuario;visualizar-información-del-perfil",
+        "keyword": "Scenario",
+        "line": 7,
+        "name": "Visualizar información del perfil",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "que he iniciado sesion con credenciales validas",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1030000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "navego a la pagina de perfil",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 85000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "deberia ver mi información de perfil",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 12000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "deberia ver mi nombre completo \"Usuario de Prueba\"",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9000000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "perfil-de-usuario;editar-perfil-con-datos-válidos",
+        "keyword": "Scenario",
+        "line": 13,
+        "name": "Editar perfil con datos válidos",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 14,
+            "name": "que estoy en la pagina de perfil",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 631000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 15,
+            "name": "hago click en el boton \"Editar Perfil\"",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 83000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 16,
+            "name": "actualizo mi nombre completo a \"Nuevo Nombre\"",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 349000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 17,
+            "name": "actualizo mi email a \"nuevo@example.com\"",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 407000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 18,
+            "name": "actualizo mi biografia a \"Esta es mi nueva biografía\"",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 518000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 19,
+            "name": "hago click en el boton \"Guardar Cambios\"",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 77000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 20,
+            "name": "deberia ver el mensaje de éxito \"Perfil actualizado correctamente\"",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 21,
+            "name": "deberia ver mi nombre completo \"Nuevo Nombre\"",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8000000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "perfil-de-usuario;validación-de-campos-obligatorios",
+        "keyword": "Scenario",
+        "line": 23,
+        "name": "Validación de campos obligatorios",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 24,
+            "name": "que estoy en la pagina de perfil",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 618000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 25,
+            "name": "hago click en el boton \"Editar Perfil\"",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 82000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 26,
+            "name": "borro el campo de nombre completo",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 155000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 27,
+            "name": "hago click en el boton \"Guardar Cambios\"",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 80000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 28,
+            "name": "deberia ver el mensaje de error en perfil \"El nombre completo es obligatorio\"",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8000000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "perfil-de-usuario;validación-de-formato-de-email",
+        "keyword": "Scenario",
+        "line": 30,
+        "name": "Validación de formato de email",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 31,
+            "name": "que estoy en la pagina de perfil",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 625000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 32,
+            "name": "hago click en el boton \"Editar Perfil\"",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 80000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 33,
+            "name": "actualizo mi email a \"correo-invalido\"",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 390000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 34,
+            "name": "hago click en el boton \"Guardar Cambios\"",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 82000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 35,
+            "name": "deberia ver el mensaje de error en perfil \"El formato del email no es válido\"",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6000000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "perfil-de-usuario;cancelar-edición-de-perfil",
+        "keyword": "Scenario",
+        "line": 37,
+        "name": "Cancelar edición de perfil",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 38,
+            "name": "que estoy en la pagina de perfil",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 619000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 39,
+            "name": "hago click en el boton \"Editar Perfil\"",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 82000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 40,
+            "name": "actualizo mi nombre completo a \"Nombre Temporal\"",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 387000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 41,
+            "name": "hago click en el boton \"Cancelar\"",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 79000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 42,
+            "name": "deberia ver mi nombre completo \"Usuario de Prueba\"",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 43,
+            "name": "no deberia ver el formulario de edición",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6000000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "perfil-de-usuario",
+    "line": 2,
+    "keyword": "Feature",
+    "name": "Perfil de Usuario",
+    "tags": [],
+    "uri": "cypress/e2e/features/profile.feature"
   }
 ]
